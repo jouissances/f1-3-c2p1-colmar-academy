@@ -1,0 +1,652 @@
+/* Global CSS */
+
+* {
+    font-size: 16px;
+}
+
+/* Header CSS */
+
+header {
+    background-color: white;
+    margin: 1rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 2rem;
+}
+
+.logo .words {
+    display: inline;
+    font-family: "Poppins";
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+.words #words-bold {
+    font-weight: 700;
+}
+
+.words #words-light {
+    font-weight: 300;
+}
+
+header nav a {
+    margin-left: 1rem;
+    font-family: "Roboto";
+    font-size: 0.8rem;
+    letter-spacing: 0.03rem;
+    text-decoration: none;
+    color: dimgray;
+}
+
+/* Section CSS: Learn Something */
+
+.learn {
+}
+.learn-wrapper {
+    background-color: darkgray;
+    display: flex;
+    flex-direction: row;
+}
+
+.learn-wrapper .column-left-wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.learn-wrapper .column-left-wrapper img {
+    max-width: 100%;
+    height: auto;
+    padding: 2rem 1rem 2rem 1.5rem;
+}
+
+.text-wrapper {
+    float: right;
+    clear: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    margin-left: 1rem;
+    width: 28%;
+} 
+
+#header-text {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: #33322E;
+    padding-bottom: 2rem;
+}
+
+#desc-text {
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    padding-bottom: 2rem;
+}
+   
+.start-btn {
+	border: none;
+	overflow: hidden;
+	width: auto;
+    height: auto;
+    text-align: center;
+    padding: 0.5rem 1rem;
+}
+
+.start-btn a {
+    font-family: "Poppins";
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    color: #33322E;
+    border-radius: 0.1rem;
+    text-decoration: none;
+    width: 100%;
+    height: 113%;
+    padding: 0.5rem 2rem;
+    position: relative;
+}
+
+.start-btn a::before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: -16px;
+	width: 121%;
+	height: 102%;
+	border: 2px solid;
+	border-radius: inherit;
+	clip-path: url(../index.html#clipBox);
+	transform: translate3d(0, 100%, 0) translate3d(0, -5px, 0);
+	transform-origin: 50% 100%;
+}
+
+.start-btn a.button--border-thin::before {
+	border: 1px solid;
+	transform: translate3d(0, 50%, 0) translate3d(0, -1px, 0);
+}
+.start-btn a.button--border-thick::before {
+	border: 3px solid;
+	transform: translate3d(0, 100%, 0) translate3d(0, -3px, 0);
+}
+
+.start-btn a::before,
+.start-btn a {
+	transition: transform 0.3s;
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.start-btn a > span {
+	display: block;
+	padding: 20px;
+	transition: transform 0.3s, opacity 0.3s;
+	transition-delay: 0.3s;
+}
+.start-btn a:hover::before {
+	transform: translate3d(0, -7.5%, 0);
+}
+
+.start-btn a:hover > span {
+	opacity: 0;
+	transform: translate3d(0, -50%, 0);
+	transition-delay: 0s;
+}
+
+/* Section CSS: Practice Everyday */
+
+.practice {
+}
+
+.practice-wrapper {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+}
+
+.practice-wrapper .column-left-wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.5rem;
+    border-right: 1px solid lightgray;
+}
+
+.practice-wrapper .column-left-wrapper img {
+    max-width: 100%;
+    height: auto;
+    padding: 2rem 0 2rem 1.5rem;
+
+}
+
+.practice-wrapper .column-left-wrapper #header-text {
+    padding: 1rem 0 1.5rem 1.5rem;
+}
+
+.practice-wrapper .column-left-wrapper #desc-text {
+    padding-left: 1.5rem;    
+}
+
+.practice-wrapper .column-left-wrapper p {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    text-align: right;
+    padding: 1rem 0 1.5rem 1.5rem;   
+}
+
+.practice-wrapper .column-right-wrapper {
+    padding: 1rem 0 2rem 0;
+    width: 40%;
+    height: 100%;
+}
+
+.practice-wrapper .column-right-wrapper .info-row:last-child {
+    background-color: lightgray;
+}
+
+.practice-wrapper .info-row {
+    display: inline-flex;
+    border-bottom: 1px solid lightgray;
+}
+
+.practice-wrapper .info-row img {
+    width: 35%;
+    height: 35%;
+    padding: 1rem 1rem;
+}
+
+.practice-wrapper .info-box {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+}
+
+.practice-wrapper .info-box #desc-text {
+    width: 80%;
+    padding: 0.5rem 0;
+}
+
+#info-title {
+    font-family: "Poppins";
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+#read-more a {
+    font-family: "Poppins";
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: cornflowerblue;
+    transition: all 300ms ease-in;
+}
+
+#read-more a:hover {
+    color: #3676e8;
+    text-decoration: underline;
+}
+
+/* Section CSS: Courses Selection */
+
+.courses {
+    background-color: #e5e5e5;
+    padding: 0 4rem 2rem 4rem;
+}
+
+.courses #header-text {
+    padding: 2rem 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.courses-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#course-box {
+    width: 30%;
+    height: auto;
+    background-color: white;
+    margin: 0 2rem 2rem 0;
+}
+
+#course-box img {
+    width: 100%;
+    height: auto;
+}
+
+#course-desc {
+    background-color: white;
+    font-family: "Roboto";
+    font-weight: 200;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    width: 90%;
+    padding: 1rem 0 1rem 1rem;
+}
+
+#course-desc #course-title {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+#course-desc #course-dummy {
+    color: dimgrey;
+    font-weight: 400;
+    line-height: 2;
+}
+
+#course-desc #course-info {
+    display: inline-block;
+    width: 100%;
+}
+
+#course-desc #course-info #modules {
+    width: 100%;
+} 
+
+#course-desc #course-info #modules a {
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+    line-height: 2.5;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
+    padding: 0.25rem 0.5rem;
+    margin: 0.05rem;
+    width: auto;
+    border-radius: 1rem;
+    transition: all 400ms ease-in 10ms;
+}
+
+#course-desc #course-info #modules a:hover {
+    text-decoration: none;
+    background-color: darkslategray;
+    border: 1px solid darkslategray;
+    color: white;
+}
+
+/* Section CSS: Thesis Exhibit */
+
+.exhibit {
+    background-color: #f2f2f2;
+}
+
+.exhibit #header-text {
+    padding: 2rem 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.exhibit-wrapper {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+}
+
+.exhibit-wrapper .column-left-wrapper {
+    width: 62.5%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.5rem;
+}
+
+.exhibit-wrapper .column-left-wrapper video {
+    max-width: 100%;
+    height: auto;
+    padding: 0 0 0 1.5rem;
+}
+
+.exhibit-wrapper .column-left-wrapper #header-text {
+    text-align: left;
+    margin: 0;
+    padding: 1.5rem 0 1rem 1.5rem;
+    display: block;
+}
+
+.exhibit-wrapper .column-left-wrapper #desc-text {
+    padding-left: 1.5rem;    
+    padding-bottom: 2rem;
+}
+
+.exhibit-wrapper .column-left-wrapper p {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    text-align: right;
+    padding: 1rem 0 1.5rem 1.5rem;   
+}
+
+.exhibit-wrapper .column-right-wrapper {
+    padding: 1rem 0 2rem 0;
+    width: 40%;
+    height: 100%;
+    border: none;
+}
+
+.exhibit-wrapper .column-right-wrapper .info-row:first-child {
+    background-color: lightgray;
+}
+
+.exhibit-wrapper .column-right-wrapper .info-row:last-child {
+    background-color: #f5f5f5;
+}
+
+.exhibit-wrapper .column-right-wrapper .info-row {
+    display: inline-flex;
+    width: 99%;
+    border: none;
+}
+
+.exhibit-wrapper .column-right-wrapper .info-row img {
+    width: 35%;
+    height: 35%;
+    padding: 1rem 1rem;
+}
+
+.exhibit-wrapper .column-right-wrapper .info-box {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+}
+
+.exhibit-wrapper .column-right-wrapper .info-box #desc-text {
+    padding: 0.5rem 0;
+}
+
+.exhibit-wrapper .column-right-wrapper #info-title {
+    font-family: "Poppins";
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Footer CSS */
+
+footer {
+    padding: 1rem 1.25rem 3rem 1.5rem;
+    border-top: 1px solid lightgray;
+    font-family: "Roboto";
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: dimgray;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: dimgray;
+    padding: 0 0.25rem;
+}
+
+footer nav a:hover {
+    color: darkslategray;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1600px) {
+    .mobile-top-nav {
+        display: none;
+    }
+    
+    .mobile-column-right-wrapper {
+        display: none;
+    }
+    
+    .mobile-courses-wrapper {
+        display: none;
+    }
+
+    .mobile-exhibit-wrapper {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+     header {
+        width: auto;
+    }
+    
+    .logo,
+    .top-nav {
+        display: none;
+    }
+    
+    .mobile-top-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    }
+    
+    .learn {
+        background-color: darkgray;
+        height: 35.5rem;
+        width: 100%;
+    }
+
+    .learn-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .learn-wrapper img {
+        min-width: 167%;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        top: -2rem;
+        left: -1.5rem;
+    }
+    
+    .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 1.5rem;
+        margin-top: -3rem;
+        width: 80%;
+    } 
+
+    .text-wrapper #header-text {
+        font-family: "Poppins";
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: #33322E;
+        margin-top: -1rem;
+        padding: 1.5rem 0;
+    }
+
+    .text-wrapper #desc-text {
+        font-family: "Roboto";
+        font-weight: 100;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        position: relative;
+        top: -0.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    
+    .practice-wrapper .column-left-wrapper {
+        display: none;
+    }
+
+    .practice-wrapper .column-right-wrapper {
+        display: none;
+    }
+    
+    .practice-wrapper .mobile-column-right-wrapper {
+        width: 100%;
+        padding: 2rem 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .practice-wrapper .mobile-column-right-wrapper .mobile-info-row img {
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    .practice-wrapper .mobile-column-right-wrapper .mobile-info-row {
+        display: block;
+    }
+    
+    .practice-wrapper .mobile-info-box {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2.5rem;
+    }
+
+    .practice-wrapper .mobile-info-box #desc-text {
+        width: 100%;
+        padding: 0.5rem 0;
+        font-size: 0.75rem
+    }
+
+    .practice-wrapper #info-title {
+        font-family: "Poppins";
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    .courses-wrapper {
+        display: none;
+    }
+    
+    .mobile-courses-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #mobile-course {
+    }
+    
+    #mobile-course a {
+        font-family: "Roboto";
+        text-decoration: none;
+        color: darkslategray;
+        background-color: lightgray;
+        line-height: 3.5;
+        border-radius: 0.5rem;
+        width: 100%;
+        padding: 1rem;  
+        transition: all 400ms ease-in 10ms;
+    }
+    
+    #mobile-course a:hover {
+        color: #ffffff;
+        background-color: darkslategray; 
+    }
+    
+    .exhibit-wrapper {
+        display: none;
+    }
+    
+    .mobile-exhibit-wrapper {
+        display: block;
+        max-width: 100%;
+    }
+    
+    #copyright {
+        padding: 2rem 0 0 0;
+        margin-bottom: -1.5rem;
+    }
+    
+    #footer-nav {
+        display: none;
+    }
+    
+}
+
